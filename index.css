@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --font-en: "Plus Jakarta Sans", sans-serif;
+  --font-ar: "Tajawal", sans-serif;
+  --breakpoint-xs: 400px;
+}
+
+:root {
+  --bg-color: #0f0720;
+  --text-color: #f3e8ff;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+/* Base Body Style for Instant Render */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  touch-action: manipulation;
+  scroll-behavior: smooth;
+  font-family: var(--font-en);
+}
+
+[dir="rtl"] body {
+  font-family: var(--font-ar);
+}
+
+/* Optimization: Pure CSS Static Background for immediate feedback */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -30;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 90% 90%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.theme-transition {
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+}
+
+/* Hide Content Visibility initially to speed up first paint */
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 400px;
+}
+
+/* Performance Utilities */
+.will-change-transform {
+  will-change: transform;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 1cm;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.2);
+  border-radius: 10px;
+}
