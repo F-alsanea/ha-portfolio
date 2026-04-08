@@ -31,7 +31,7 @@ export const EXPERIENCES_DATA = {
     {
       id: 'hamat',
       company: 'Hamat Company',
-      role: 'Talent Development & HR Specialist',
+      role: 'Talent Development & HR Specialist - Tamheer',
       period: 'Jan 2020 - Jul 2020',
       description: [
         'Spearheaded the selection and onboarding of top-tier trainees, building a pipeline for future organizational growth.',
@@ -69,7 +69,7 @@ export const EXPERIENCES_DATA = {
     {
       id: 'hamat',
       company: 'شركة هامات',
-      role: 'أخصائية تمبير',
+      role: 'أخصائية موارد بشرية - تمهير',
       period: 'يناير 2020 - يوليو 2020',
       description: [
         'قيادة عمليات اختيار وتوظيف الكفاءات التدريبية المتميزة لبناء كوادر مستقبلية للشركة.',
