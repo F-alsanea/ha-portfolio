@@ -31,7 +31,7 @@ export const EXPERIENCES_DATA = {
     {
       id: 'hamat',
       company: 'Hamat Company',
-      role: 'Tambeer Specialist',
+      role: 'Talent Development & HR Specialist',
       period: 'Jan 2020 - Jul 2020',
       description: [
         'Spearheaded the selection and onboarding of top-tier trainees, building a pipeline for future organizational growth.',
